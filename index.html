@@ -87,6 +87,28 @@
 			<a href="" class="button">Как проехать</a>
 			<a href="" class="button">Обратная связь</a>
 		</section>
+
+		<section class="request">
+			<h2 class="title">Записаться</h2>
+
+			<p class="text">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
+
+			<form action="" method="post" class="request-form">
+				<label for="appt_date_input" class="text">Дата</label>
+				<input type="date" class="request-form__input" id="appt_date_input" name="appt_date" value="2020-10-08">
+
+				<label for="appt_time_input" class="text">Время</label>
+				<input type="time" class="request-form__input" id="appt_time_input" name="appt_time" value="10:00">
+
+				<label for="name_input" class="text">Ваше имя</label>
+				<input type="text" class="request-form__input" id="name_input" name="name" placeholder="Борода">
+
+				<label for="phone_input" class="text">Телефон</label>
+				<input type="phone" class="request-form__input" id="phone_input" name="phone" placeholder="+7 123 456-78-90" pattern="+7 [0-9]{3} [0-9]{3}-[0-9]{2}-[0-9]{3}">
+
+				<input type="submit" value="Отправить" class="request-form__button button">
+			</form>
+		</section>
 	</main>
 
 	<footer class="footer">
