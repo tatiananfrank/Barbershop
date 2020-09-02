@@ -99,20 +99,20 @@
 
 			<p class="text">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
 
-			<form class="request-form" action="" method="post">
+			<form class="form request-form" action="" method="post">
 				<label class="text" for="appt_date_input">Дата</label>
-				<input class="request-form__input" type="date" id="appt_date_input" name="appt_date" value="2020-10-08">
+				<input class="form__input request-form__input" type="date" id="appt_date_input" name="appt_date" value="2020-10-08">
 
 				<label class="text" for="appt_time_input">Время</label>
-				<input class="request-form__input" type="time" id="appt_time_input" name="appt_time" value="10:00">
+				<input class="form__input request-form__input" type="time" id="appt_time_input" name="appt_time" value="10:00">
 
 				<label class="text" for="name_input">Ваше имя</label>
-				<input class="request-form__input" type="text" id="name_input" name="name" placeholder="Борода">
+				<input class="form__input request-form__input" type="text" id="name_input" name="name" placeholder="Борода">
 
 				<label class="text" for="phone_input">Телефон</label>
-				<input class="request-form__input" type="phone" id="phone_input" name="phone" placeholder="+7 123 456-78-90" pattern="+7 [0-9]{3} [0-9]{3}-[0-9]{2}-[0-9]{3}">
+				<input class="form__input request-form__input" type="phone" id="phone_input" name="phone" placeholder="+7 123 456-78-90" pattern="+7 [0-9]{3} [0-9]{3}-[0-9]{2}-[0-9]{3}">
 
-				<input class="request-form__button button" type="submit" value="Отправить">
+				<input class="form__button button" type="submit" value="Отправить">
 			</form>
 		</section>
 	</main>
@@ -151,23 +151,23 @@
 
 		<p class="text">Введите пожалуйста свой логин и пароль</p>
 
-		<form class="login-form" action="" method="post">
-			<input class="login-form__input" type="text" id="login_input" name="login" placeholder="Логин">
-			<input class="login-form__input" type="password" id="password_input" name="password" placeholder="Пароль">
+		<form class="form login-form" action="" method="post">
+			<input class="form__input login-form__input" type="text" id="login_input" name="login" placeholder="Логин">
+			<input class="form__input login-form__input" type="password" id="password_input" name="password" placeholder="Пароль">
 			<label class="text">
-				<input class="login-form__checkbox" type="checkbox" name="remember_me_checkbox" checked>
+				<input class="form__checkbox" type="checkbox" name="remember_me_checkbox" checked>
 				Запомните меня
 			</label>
 			<a class="text" href="">Я забыл пароль!</a>
-			<input class="login-form__button button" type="submit">
+			<input class="form__button button" type="submit">
 		</form>
 
-		<span class="modal__close-button">x</span>
+		<span class="close-button">x</span>
 	</section>
 
 	<section class="modal-map">
 		<h2 class="title">Как до нас добраться</h2>
-		<span class="modal-map__close-button">x</span>
+		<span class="close-button">x</span>
 	</section>
 </body>
 </html>
