@@ -8,4 +8,9 @@ body {
 	font-weight: 700;
 	color: #fff;
 	text-transform: uppercase;
+
+	background-color: #000;
+	background-image: url("../img/index-bg.png");
+	background-position: top center;
+	background-repeat: no-repeat; 
 }
