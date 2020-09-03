@@ -7,29 +7,31 @@
 <body>
 	<header class="header">
 		<nav class="menu">
-			<a class="logo" href="">
-				<img class="logo__img" src="img/logo.svg" alt="Логотип барбершопа «Бородинский»" width="111" height="24">
+			<a class="logo">
+				<img class="logo__img" src="img/index-logo.svg" alt="Логотип барбершопа «Бородинский»" width="368" height="153">
 			</a>
 
 			<ul class="menu__list">
-				<li class="menu__item"><a class="menu__link" href="">Информация</a></li>
-				<li class="menu__item"><a class="menu__link" href="">Новости</a></li>
-				<li class="menu__item"><a class="menu__link" href="">Прайс-лист</a></li>
-				<li class="menu__item"><a class="menu__link" href="">Магазин</a></li>
-				<li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
+				<li class="menu__item"><a class="menu__link" href="shop.html">Информация</a></li>
+				<li class="menu__item"><a class="menu__link" href="shop.html">Новости</a></li>
+				<li class="menu__item"><a class="menu__link" href="shop.html">Прайс-лист</a></li>
+				<li class="menu__item"><a class="menu__link" href="shop.html">Магазин</a></li>
+				<li class="menu__item"><a class="menu__link" href="shop.html">Контакты</a></li>
 			</ul>
 
 			<ul class="user-menu">
-				<li class="user-menu__login-link">Вход</li>
+				<li class="user-menu__login-link">
+					<a class="" href="login.html">Вход</a>
+				</li>
 			</ul>
 		</nav>
 	</header>
 
 	<main class="main">
-		<h1>Барбершоп «Бородинский»</h1>
+		<h1 class="visually-hidden">Барбершоп «Бородинский»</h1>
 
 		<section class="features">
-			<h2>Преимущества</h2>
+			<h2 class="visually-hidden">Преимущества</h2>
 
 			<ul class="features__list">
 				<li class="features__item item">
@@ -73,8 +75,8 @@
 				</a>
 			</div>
 
-			<span class="gallery__button button">Назад</a>
-			<span class="gallery__button button">Вперед</a>
+			<button class="gallery__button button" type="button">Назад</button>
+			<button class="gallery__button button" type="button">Вперед</button>
 		</section>
 
 		<section class="contact-info">
@@ -100,19 +102,27 @@
 			<p class="text">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
 
 			<form class="form request-form" action="" method="post">
-				<label class="text" for="appt_date_input">Дата</label>
-				<input class="form__input request-form__input" type="date" id="appt_date_input" name="appt_date" value="2020-10-08">
+				<p class="form__item request-form__item">
+					<label class="text" for="appt_date_input">Дата</label>
+					<input class="form__input request-form__input" type="text" id="appt_date_input" name="appt_date" value="" placeholder="08.10.2020">
+				</p>
 
-				<label class="text" for="appt_time_input">Время</label>
-				<input class="form__input request-form__input" type="time" id="appt_time_input" name="appt_time" value="10:00">
+				<p class="form__item request-form__item">
+					<label class="text" for="appt_time_input">Время</label>
+					<input class="form__input request-form__input" type="text" id="appt_time_input" name="appt_time" value="" placeholder="10:00">
+				</p>
 
-				<label class="text" for="name_input">Ваше имя</label>
-				<input class="form__input request-form__input" type="text" id="name_input" name="name" placeholder="Борода">
+				<p class="form__item request-form__item">
+					<label class="text" for="name_input">Ваше имя</label>
+					<input class="form__input request-form__input" type="text" id="name_input" name="name" value="" placeholder="Борода">
+				</p>
 
-				<label class="text" for="phone_input">Телефон</label>
-				<input class="form__input request-form__input" type="phone" id="phone_input" name="phone" placeholder="+7 123 456-78-90" pattern="+7 [0-9]{3} [0-9]{3}-[0-9]{2}-[0-9]{3}">
+				<p class="form__item request-form__item">
+					<label class="text" for="phone_input">Телефон</label>
+					<input class="form__input request-form__input" type="tel" id="phone_input" name="phone" value="" placeholder="+7 123 456-78-90">
+				</p>
 
-				<input class="form__button button" type="submit" value="Отправить">
+				<button class="form__button button" type="submit">Отправить</button>
 			</form>
 		</section>
 	</main>
@@ -152,22 +162,34 @@
 		<p class="text">Введите пожалуйста свой логин и пароль</p>
 
 		<form class="form login-form" action="" method="post">
-			<input class="form__input login-form__input" type="text" id="login_input" name="login" placeholder="Логин">
-			<input class="form__input login-form__input" type="password" id="password_input" name="password" placeholder="Пароль">
-			<label class="text">
-				<input class="form__checkbox" type="checkbox" name="remember_me_checkbox" checked>
-				Запомните меня
-			</label>
-			<a class="text" href="">Я забыл пароль!</a>
-			<input class="form__button button" type="submit">
+			<p class="form__item login-form__item">
+				<label class="visually-hidden" for="login_input">Логин</label>	
+				<input class="form__input login-form__input" type="text" id="login_input" name="login" placeholder="Логин">
+			</p>
+			<p class="form__item login-form__item">
+				<label class="visually-hidden" for="password_input">Пароль</label>
+				<input class="form__input login-form__input" type="password" id="password_input" name="password" placeholder="Пароль">
+			</p>
+			<p class="form__item login-form__item">
+				<label class="text">
+					<input class="visually-hidden" type="checkbox" id="remember_me_checkbox" name="remember_me" checked>
+					<span class="form__checkbox"></span>
+					Запомните меня
+				</label>
+				<a class="text" href="">Я забыл пароль!</a>
+			</p>
+			<button class="form__button button" type="submit">Войти</button>
 		</form>
 
-		<span class="close-button">x</span>
+		<button class="close-button" type="button">Закрыть</button>
 	</section>
 
 	<section class="modal-map">
-		<h2 class="title">Как до нас добраться</h2>
-		<span class="close-button">x</span>
+		<h2 class="visually-hidden title">Как до нас добраться</h2>
+		<p>
+			<img class="" src="img/map.png" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург" width="780" height="560">
+		</p>
+		<button class="close-button" type="button">Закрыть</button>
 	</section>
 </body>
 </html>

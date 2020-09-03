@@ -12,15 +12,17 @@
 			</a>
 
 			<ul class="menu__list">
-				<li class="menu__item"><a class="menu__link" href="">Информация</a></li>
-				<li class="menu__item"><a class="menu__link" href="">Новости</a></li>
-				<li class="menu__item"><a class="menu__link" href="">Прайс-лист</a></li>
-				<li class="menu__item menu__item_active"><a class="menu__link" href="">Магазин</a></li>
-				<li class="menu__item"><a class="menu__link" href="">Контакты</a></li>
+				<li class="menu__item"><a class="menu__link" href="shop.html">Информация</a></li>
+				<li class="menu__item"><a class="menu__link" href="shop.html">Новости</a></li>
+				<li class="menu__item"><a class="menu__link" href="shop.html">Прайс-лист</a></li>
+				<li class="menu__item menu__item_active"><a class="menu__link" href="shop.html">Магазин</a></li>
+				<li class="menu__item"><a class="menu__link" href="shop.html">Контакты</a></li>
 			</ul>
 
 			<ul class="user-menu">
-				<li class="user-menu__login-link">Вход</li>
+				<li class="user-menu__login-link">
+					<a class="" href="login.html">Вход</a>
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -36,7 +38,7 @@
 		</ul>
 
 		<section class="product-photos">
-			<h2>Изображения товара</h2>
+			<h2 class="visually-hidden">Изображения товара</h2>
 
 			<p class="product-photos__photo-full">
 				<img class="product-photos__photo-full-img" src="img/product-photo-1.jpg" alt="Фото всего набора" width="486" height="524">
@@ -55,7 +57,7 @@
 		</section>
 
 		<section class="product-info">
-			<h2>Описание товара</h2>
+			<h2 class="visually-hidden">Описание товара</h2>
 
 			<p class="product-info__availability text">Есть в наличии</p>
 			<p class="product-info__code text">Артикул: Dexter-AE</p>
@@ -112,17 +114,26 @@
 		<p class="text">Введите пожалуйста свой логин и пароль</p>
 
 		<form class="form login-form" action="" method="post">
-			<input class="form__input login-form__input" type="text" id="login_input" name="login" placeholder="Логин">
-			<input class="form__input login-form__input" type="password" id="password_input" name="password" placeholder="Пароль">
-			<label class="text">
-				<input class="form__checkbox" type="checkbox" name="remember_me_checkbox" checked>
-				Запомните меня
-			</label>
-			<a class="text" href="">Я забыл пароль!</a>
-			<input class="form__button button" type="submit">
+			<p class="form__item login-form__item">
+				<label class="visually-hidden" for="login_input">Логин</label>	
+				<input class="form__input login-form__input" type="text" id="login_input" name="login" placeholder="Логин">
+			</p>
+			<p class="form__item login-form__item">
+				<label class="visually-hidden" for="password_input">Пароль</label>
+				<input class="form__input login-form__input" type="password" id="password_input" name="password" placeholder="Пароль">
+			</p>
+			<p class="form__item login-form__item">
+				<label class="text">
+					<input class="visually-hidden" type="checkbox" id="remember_me_checkbox" name="remember_me" checked>
+					<span class="form__checkbox"></span>
+					Запомните меня
+				</label>
+				<a class="text" href="">Я забыл пароль!</a>
+			</p>
+			<button class="form__button button" type="submit">Войти</button>
 		</form>
 
-		<span class="close-button">x</span>
+		<button class="close-button" type="button">Закрыть</button>
 	</section>
 </body>
 </html>
