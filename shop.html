@@ -5,8 +5,9 @@
 	<title>Барбершоп «Бородинский» - Магазин</title>
 	<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
 	<link href="css/normalize.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
 </head>
-<body>
+<body class="content">
 	<header class="header">
 		<nav class="menu">
 			<a class="logo" href="index.html">
@@ -29,7 +30,7 @@
 		</nav>
 	</header>
 
-	<main class="content main-content">
+	<main class="main-content">
 		<h1 class="content__title">Средства для ухода</h1>
 
 		<ul class="breadcrumbs">
@@ -206,7 +207,7 @@
 		<p class="footer__item">
 			Барбершоп «Бородинский»<br>
 			Адрес: г. Санкт-Петербург, Б.Конюшенная, д. 19/8<br>
-			<a href="">Как нас найти?</a><br>
+			<a class="footer__link" href="">Как нас найти?</a><br>
 			Телефон: +7 (495) 666-02-66
 		</p>
 
@@ -227,7 +228,7 @@
 
 		<p class="footer__item">
 			<b>Разработано:</b>
-			<a class="button" href="">HTML Academy</a>
+			<a class="button footer__button" href="">HTML Academy</a>
 		</p>
 	</footer>
 
@@ -236,22 +237,22 @@
 
 		<p class="content__text">Введите пожалуйста свой логин и пароль</p>
 
-		<form class="form" action="" method="post">
+		<form class="form modal-form" action="" method="post">
 			<p class="form-item form__item">
 				<label class="visually-hidden" for="login_input">Логин</label>	
-				<input class="form-item__input" type="text" id="login_input" name="login" placeholder="Логин">
+				<input class="form-item__input modal-form__input" type="text" id="login_input" name="login" placeholder="Логин">
 			</p>
 			<p class="form-item form__item">
 				<label class="visually-hidden" for="password_input">Пароль</label>
-				<input class="form-item__input" type="password" id="password_input" name="password" placeholder="Пароль">
+				<input class="form-item__input modal-form__input" type="password" id="password_input" name="password" placeholder="Пароль">
 			</p>
 			<p class="form-item form__item">
-				<label class="form-item__label">
+				<label class="form-item__label modal-form__checkbox-area">
 					<input class="visually-hidden" type="checkbox" id="remember_me_checkbox" name="remember_me" checked>
 					<span class="form-item__checkbox"></span>
 					Запомните меня
 				</label>
-				<a class="" href="">Я забыл пароль!</a>
+				<a class="modal-form__restore" href="">Я забыл пароль!</a>
 			</p>
 			<button class="button" type="submit">Войти</button>
 		</form>
