@@ -118,11 +118,11 @@ a {
 }
 
 .footer__item {
-	text-align: center;
+	text-align: left;
 }
 
-.footer__item:first-child {
-	text-align: left;
+.footer__item_text_centered {
+	text-align: center;
 }
 
 .footer__link {
