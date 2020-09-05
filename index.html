@@ -8,32 +8,36 @@
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-	<header class="header">
+	<header class="header header_margin-bottom">
 		<nav class="menu">
 			<a class="logo">
 				<img class="logo__img" src="img/index-logo.svg" alt="Логотип барбершопа «Бородинский»" width="368" height="153">
 			</a>
 
-			<ul class="menu__list">
-				<li class="menu__item"><a class="menu__link" href="shop.html">Информация</a></li>
-				<li class="menu__item"><a class="menu__link" href="shop.html">Новости</a></li>
-				<li class="menu__item"><a class="menu__link" href="shop.html">Прайс-лист</a></li>
-				<li class="menu__item"><a class="menu__link" href="shop.html">Магазин</a></li>
-				<li class="menu__item"><a class="menu__link" href="shop.html">Контакты</a></li>
-			</ul>
+			<div class="wrapper menu__wrapper">
+				<div class="container header__container">
+					<ul class="menu__list menu__list_size_l">
+						<li class="menu__item"><a class="menu__link" href="shop.html">Информация</a></li>
+						<li class="menu__item"><a class="menu__link" href="shop.html">Новости</a></li>
+						<li class="menu__item"><a class="menu__link" href="shop.html">Прайс-лист</a></li>
+						<li class="menu__item"><a class="menu__link" href="shop.html">Магазин</a></li>
+						<li class="menu__item"><a class="menu__link" href="shop.html">Контакты</a></li>
+					</ul>
 
-			<ul class="menu__list">
-				<li class="menu__item">
-					<a class="menu__link" href="login.html">Вход</a>
-				</li>
-			</ul>
+					<ul class="menu__list menu__list_size_s">
+						<li class="menu__item">
+							<a class="menu__link" href="login.html">Вход</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</nav>
 	</header>
 
-	<main class="main-content">
+	<main class="main-content container">
 		<h1 class="visually-hidden">Барбершоп «Бородинский»</h1>
 
-		<section class="features">
+		<section class="features main-content__features">
 			<h2 class="visually-hidden">Преимущества</h2>
 
 			<ul class="features__list">
@@ -52,8 +56,8 @@
 			</ul>
 		</section>
 
-		<div class="content">
-			<section class="">
+		<div class="content main-content__content main-content__content_margin-bottom">
+			<section class="content__block content__block_size_l">
 				<h2 class="content__title">Новости</h2>
 
 				<ul class="news-list content__text">
@@ -70,7 +74,7 @@
 				<a class="button content__button" href="">Все новости</a>
 			</section>
 
-			<section class="">
+			<section class="content__block content__block_size_m">
 				<h2 class="content__title">Фотогалерея</h2>
 
 				<div class="gallery content__img">
@@ -84,8 +88,8 @@
 			</section>
 		</div>
 
-		<div class="content">
-			<section class="">
+		<div class="content main-content__content">
+			<section class="content__block content__block_size_l">
 				<h2 class="content__title">Контактная информация</h2>
 
 				<p class="content__text">
@@ -102,7 +106,7 @@
 				<a class="button content__button" href="">Обратная связь</a>
 			</section>
 
-			<section class="">
+			<section class="content__block content__block_size_m">
 				<h2 class="content__title">Записаться</h2>
 
 				<p class="content__text">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони</p>
@@ -134,33 +138,35 @@
 		</div>
 	</main>
 
-	<footer class="footer">
-		<p class="footer__item">
-			Барбершоп «Бородинский»<br>
-			Адрес: г. Санкт-Петербург, Б.Конюшенная, д. 19/8<br>
-			<a class="footer__link" href="">Как нас найти?</a><br>
-			Телефон: +7 (495) 666-02-66
-		</p>
+	<footer class="footer footer_margin-top">
+		<div class="container footer__container">
+			<p class="footer__item footer__item_size_l footer__item_margin-right">
+				Барбершоп «Бородинский»<br>
+				Адрес: г. Санкт-Петербург, Б.Конюшенная, д. 19/8<br>
+				<a class="footer__link" href="">Как нас найти?</a><br>
+				Телефон: +7 (495) 666-02-66
+			</p>
 
-		<div class="footer__item footer__item_text_centered">
-			<b>Давайте дружить!</b>
-			<ul class="social">
-				<li class="social__item">
-					<a class="social__link" href="">вконтакте</a>
-				</li>
-				<li class="social__item">
-					<a class="social__link" href="">facebook</a>
-				</li>
-				<li class="social__item">
-					<a class="social__link" href="">istagram</a>
-				</li>
-			</ul>
+			<div class="footer__item footer__item_size_s footer__item_text_centered">
+				<b>Давайте дружить!</b>
+				<ul class="social">
+					<li class="social__item">
+						<a class="social__link" href="">вконтакте</a>
+					</li>
+					<li class="social__item">
+						<a class="social__link" href="">facebook</a>
+					</li>
+					<li class="social__item">
+						<a class="social__link" href="">istagram</a>
+					</li>
+				</ul>
+			</div>
+
+			<p class="footer__item footer__item_text_centered footer__item_margin-left_auto">
+				<b>Разработано:</b>
+				<a class="button footer__button" href="">HTML Academy</a>
+			</p>
 		</div>
-
-		<p class="footer__item footer__item_text_centered">
-			<b>Разработано:</b>
-			<a class="button footer__button" href="">HTML Academy</a>
-		</p>
 	</footer>
 
 	<section class="content modal">
