@@ -8,13 +8,13 @@
 	<link href="css/style.css" rel="stylesheet">
 </head>
 <body class="content">
-	<header class="header">
-		<nav class="menu">
-			<a class="logo" href="index.html">
+	<header class="header content__header header_margin-bottom_small">
+		<nav class="menu container content__menu">
+			<a class="logo content__logo" href="index.html">
 				<img class="logo__img" src="img/logo.svg" alt="Логотип барбершопа «Бородинский»" width="111" height="24">
 			</a>
 
-			<ul class="menu__list">
+			<ul class="menu__list menu__list_size_l">
 				<li class="menu__item"><a class="menu__link" href="shop.html">Информация</a></li>
 				<li class="menu__item"><a class="menu__link" href="shop.html">Новости</a></li>
 				<li class="menu__item"><a class="menu__link" href="shop.html">Прайс-лист</a></li>
@@ -22,7 +22,7 @@
 				<li class="menu__item"><a class="menu__link" href="shop.html">Контакты</a></li>
 			</ul>
 
-			<ul class="menu__list">
+			<ul class="menu__list menu__list_size_s menu__list_margin-left_auto">
 				<li class="menu__item">
 					<a class="menu__link" href="login.html">Вход</a>
 				</li>
@@ -30,85 +30,89 @@
 		</nav>
 	</header>
 
-	<main class="main-content">
-		<h1 class="content__title">Набор для путешествий «Baxter of California»</h1>
+	<main class="main-content container">
+		<h1 class="content__title main-content__title">Набор для путешествий «Baxter of California»</h1>
 
-		<ul class="breadcrumbs">
+		<ul class="breadcrumbs main-content__breadcrumbs">
 			<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
 			<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="shop.html">Магазин</a></li>
 			<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="shop.html">Средства для ухода</a></li>
 			<li class="breadcrumbs__item breadcrumbs__item_active">Набор для путешествий «Baxter of California»</li>
 		</ul>
 
-		<section class="product-photos">
-			<h2 class="visually-hidden">Изображения товара</h2>
+		<div class="main-content__columns">
+			<section class="product-photos">
+				<h2 class="visually-hidden">Изображения товара</h2>
 
-			<p class="catalog-item product-photos__photo-full">
-				<img class="" src="img/product-photo-1.jpg" alt="Фото всего набора" width="486" height="524">
-			</p>
-			<ul class="thumbnails product-photos__thumbnails">
-				<li class="catalog-item thumbnails__item">
-					<img class="thumbnails__img" src="img/product-photo-2.jpg" alt="Фото в анфас" width="140" heigth="149">
-				</li>
-				<li class="catalog-item thumbnails__item">
-					<img class="thumbnails__img" src="img/product-photo-3.jpg" alt="Фото в профиль" width="140" heigth="149">
-				</li>
-				<li class="catalog-item thumbnails__item">
-					<img class="thumbnails__img" src="img/product-photo-4.jpg" alt="Фото отдельной части" width="140" heigth="149">
-				</li>
-			</ul>
-		</section>
+				<p class="catalog-item product-photos__photo-full">
+					<img class="" src="img/product-photo-1.jpg" alt="Фото всего набора" width="486" height="524">
+				</p>
+				<ul class="thumbnails product-photos__thumbnails">
+					<li class="catalog-item thumbnails__item">
+						<img class="thumbnails__img" src="img/product-photo-2.jpg" alt="Фото в анфас" width="140" heigth="149">
+					</li>
+					<li class="catalog-item thumbnails__item">
+						<img class="thumbnails__img" src="img/product-photo-3.jpg" alt="Фото в профиль" width="140" heigth="149">
+					</li>
+					<li class="catalog-item thumbnails__item">
+						<img class="thumbnails__img" src="img/product-photo-4.jpg" alt="Фото отдельной части" width="140" heigth="149">
+					</li>
+				</ul>
+			</section>
 
-		<section class="product-info content__text">
-			<h2 class="visually-hidden">Описание товара</h2>
+			<section class="product-info content__text">
+				<h2 class="visually-hidden">Описание товара</h2>
 
-			<p class="product-info__availability">Есть в наличии</p>
-			<p class="product-info__code">Артикул: Dexter-AE</p>
-			<p class="product-info__description">Travel kit - необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.</p>
+				<p class="product-info__availability">Есть в наличии</p>
+				<p class="product-info__code">Артикул: Dexter-AE</p>
+				<p class="product-info__description">Travel kit - необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий крем, крем для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.</p>
 
-			<p class="buy product-info__buy">
-				<b class="buy__price">2 900 ₽</b>
-				<a class="button" href="">Купить</a>
-			</p>
+				<p class="buy product-info__buy">
+					<b class="buy__price">2 900 ₽</b>
+					<a class="button" href="">Купить</a>
+				</p>
 
-			<h3 class="product-info__includes-title">В набор входят:</h3>
-			<ul class="includes-list product-info__includes-list">
-				<li class="includes-list__item">Средство для умывания (50 мл)</li>
-				<li class="includes-list__item">Увляжняющий крем (50 мл)</li>
-				<li class="includes-list__item">Крем для бритья (50 мл)</li>
-				<li class="includes-list__item">Крем после бритья, шампунь (50 мл)</li>
-				<li class="includes-list__item">Удобная кожаная косметичка</li>
-			</ul>
-		</section>
+				<h3 class="product-info__includes-title">В набор входят:</h3>
+				<ul class="includes-list product-info__includes-list">
+					<li class="includes-list__item">Средство для умывания (50 мл)</li>
+					<li class="includes-list__item">Увляжняющий крем (50 мл)</li>
+					<li class="includes-list__item">Крем для бритья (50 мл)</li>
+					<li class="includes-list__item">Крем после бритья, шампунь (50 мл)</li>
+					<li class="includes-list__item">Удобная кожаная косметичка</li>
+				</ul>
+			</section>
+		</div>
 	</main>
 
-	<footer class="footer">
-		<p class="footer__item">
-			Барбершоп «Бородинский»<br>
-			Адрес: г. Санкт-Петербург, Б.Конюшенная, д. 19/8<br>
-			<a class="footer__link" href="">Как нас найти?</a><br>
-			Телефон: +7 (495) 666-02-66
-		</p>
+	<footer class="footer footer_margin-top_small">
+		<div class="container footer__container">
+			<p class="footer__item footer__item_size_l footer__item_margin-right">
+				Барбершоп «Бородинский»<br>
+				Адрес: г. Санкт-Петербург, Б.Конюшенная, д. 19/8<br>
+				<a class="footer__link" href="">Как нас найти?</a><br>
+				Телефон: +7 (495) 666-02-66
+			</p>
 
-		<div class="footer__item footer__item_text_centered">
-			<b>Давайте дружить!</b>
-			<ul class="social">
-				<li class="social__item">
-					<a class="social__link" href="">вконтакте</a>
-				</li>
-				<li class="social__item">
-					<a class="social__link" href="">facebook</a>
-				</li>
-				<li class="social__item">
-					<a class="social__link" href="">istagram</a>
-				</li>
-			</ul>
+			<div class="footer__item footer__item_size_s footer__item_text_centered">
+				<b>Давайте дружить!</b>
+				<ul class="social">
+					<li class="social__item">
+						<a class="social__link" href="">вконтакте</a>
+					</li>
+					<li class="social__item">
+						<a class="social__link" href="">facebook</a>
+					</li>
+					<li class="social__item">
+						<a class="social__link" href="">istagram</a>
+					</li>
+				</ul>
+			</div>
+
+			<p class="footer__item footer__item_text_centered footer__item_margin-left_auto">
+				<b>Разработано:</b>
+				<a class="button footer__button" href="">HTML Academy</a>
+			</p>
 		</div>
-
-		<p class="footer__item footer__item_text_centered">
-			<b>Разработано:</b>
-			<a class="button footer__button" href="">HTML Academy</a>
-		</p>
 	</footer>
 
 	<section class="content modal">
