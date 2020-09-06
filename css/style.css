@@ -1,5 +1,5 @@
 body {
-	/*min-width: 1122px;*/
+	min-width: 960px;
 	margin: 0;
 	padding: 0;
 
@@ -20,14 +20,26 @@ a {
 	text-decoration: none;
 }
 
-.visually-hidden {
-	position: absolute !important;
-	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-	clip: rect(1px, 1px, 1px, 1px);
-	padding:0 !important;
-	border:0 !important;
-	height: 1px !important; 
-	width: 1px !important; 
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+	position: absolute;
+
+	width: 1px; 
+	height: 1px; 
+	margin: -1px;
+	border: 0;
+	padding: 0;
+
+	white-space: nowrap;
+
+	clip-path: inset(100%);
+	clip: rect(0 0 0 0);
 	overflow: hidden;
 }
 
@@ -79,6 +91,8 @@ a {
 }
 
 .menu__list {
+	display: flex;
+	flex-wrap: wrap;
 	margin: 0;
 	padding: 0;
 
@@ -90,7 +104,7 @@ a {
 }
 
 .menu__list_size_s {
-	width: 140px;
+	max-width: 140px;
 }
 
 .menu__list_margin-left_auto {
@@ -98,12 +112,45 @@ a {
 }
 
 .menu__link {
+	display: block;
+	padding: 25px 20px;
+
 	color: #fff;
 }
 
 .menu__link:hover,
 .menu__link:focus {
 	background-color: #242424;
+}
+
+.menu__link_padding-left_big {
+	padding-left: 50px;
+}
+
+.login-link {
+	position: relative;
+}
+
+.login-link::before {
+	content: "";
+
+	position: absolute;
+	top: 28px;
+	left: 24px;
+	width: 16px;
+	height: 18px;
+
+	background-image: url("../img/login.svg");
+	background-position: top left;
+	background-repeat: no-repeat;
+
+	opacity: 0.3;
+}
+
+.login-link:hover::before,
+.login-link:focus::before,
+.login-link:active::before {
+	opacity: 1;
 }
 
 .main-content__features {
@@ -126,8 +173,30 @@ a {
 }
 
 .item__title {
+	position: relative;
+	margin: 0 0 60px;
+
 	font-size: 30px;
 	line-height: 42px;
+}
+
+.item__title::after {
+	content: "";
+
+	position: absolute;
+	bottom: -30px;
+	left: 50%;
+	margin-left: -10px; /* Сдвигаем влево на половину размера элемента */
+	width: 20px;
+	height: 20px;
+
+	background-color: #fff;
+
+	transform: rotate(45deg);
+}
+
+.item__text {
+	margin: 0 10px;
 }
 
 .content {
@@ -143,6 +212,16 @@ a {
 	display: flex;
 	justify-content: space-between;
 	padding: 50px 80px;
+
+	background-image: 
+		url("../img/shadow.png"),
+		url("../img/pattern-light.jpg");
+	background-position: 
+		center,
+		top left;
+	background-repeat: 
+		no-repeat,
+		repeat;
 }
 
 .main-content__content_margin-bottom {
@@ -175,30 +254,97 @@ a {
 
 .content__title {
 	margin: 0;
-	padding: 0;
+	/*padding: 0;*/
 
 	font-size: 30px;
 	line-height: 42px;
 }
 
-.main-content__title {
+.content__button {
+	margin-right: 16px;
+}
+
+.content__title_margin-bottom_small {
 	margin-bottom: 15px;
 }
 
+.content__title_margin-bottom_big {
+	margin-bottom: 25px;
+}
+
 .news-list {
+	margin: 0;
+	padding: 0;
+
 	list-style: none;
+}
+
+.content__news-list {
+	margin-bottom: 25px;
+}
+
+.news-list__item {
+	margin-bottom: 25px;
+}
+
+.news-list__title {
+	margin: 0;
 }
 
 .news-list__date {
 	text-transform: none;
 }
 
+.content__gallery {
+	position: relative;
+	height: 260px;
+}
+
 .gallery {
+	margin: 0;
+
 	background-color: #e5e5e5;
 	border: 7px solid #fff;
 }
 
+.gallery_size_xs {
+	height: 164px;
+}
+
+.gallery__img_small {
+	width: 286px;
+	height: 164px;
+}
+
+.gallery__button {
+	/* Используем такое решение, поскольку считается, что галерея всегда будет иметь фиксированную высоту */
+	position: absolute;
+	bottom: 0;
+	box-sizing: border-box;
+	width: 140px;
+	margin: 0;
+}
+
+.gallery__button_prev {
+	left: 0;
+}
+
+.gallery__button_next {
+	right: 0;
+}
+
+.contact-info__text {
+	margin: 0 0 25px;
+}
+
+.appointment__text {
+	margin: 0 0 15px;
+}
+
 .button {
+	display: inline-block;
+	padding: 10px 30px;
+
 	font: inherit;
 	color: #fff;
 	text-align: center;
@@ -207,12 +353,19 @@ a {
 
 	background-color: #000;
 	border: none;
+	cursor: pointer;
 }
 
 .button:hover,
 .button:focus,
 .button:active {
 	background-color: #663d15;
+}
+
+.button:disabled {
+	cursor: default;
+	opacity: 0.5;
+	background-color: #000;
 }
 
 .form-item__input {
@@ -224,6 +377,40 @@ a {
 
 .form-item__input:focus {
 	border-color: #663d15;
+}
+
+.appointment .form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.appointment .form-item {
+	width: 140px;
+}
+
+.appointment .form__item {
+	margin: 0 0 10px;
+}
+
+.appointment .form-item__label {
+	display: block;
+	margin: 0 0 9px 15px;
+}
+
+.appointment .form-item__input {
+	box-sizing: border-box;
+	width: 140px;
+	padding: 8px 15px 7px;
+}
+
+.appointment .button {
+	/* Гарантированно будет занимать всю строку флекс-контейнера целиком, будет единственным элементом в строке */
+	width: 100%;
+}
+
+.appointment .form__button {
+	margin-top: 10px;
 }
 
 .footer {
@@ -276,6 +463,11 @@ a {
 	margin-left: auto;
 }
 
+.footer__title {
+	display: block;
+	margin: 0 0 15px;
+}
+
 .footer__link {
 	color: #fff;
 	text-decoration: underline;
@@ -294,11 +486,37 @@ a {
 }
 
 .social {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin: 0 auto;
+	padding: 0;
+	width: 141px;
 	list-style: none;
 }
 
 .social__link {
-	color: #fff;
+	display: flex;
+	/* Выравниваем иконки по центру с помощью флекс-свойств */
+	justify-content: center;
+	align-items: center;
+	width: 43px;
+	height: 43px;
+
+	/*color: #fff;*/
+
+	background-color: #000;
+}
+
+.social__link:hover,
+.social__link:focus {
+	background-color: #fff;
+}
+
+.social__link:hover .social__icon,
+.social__link:focus .social__icon {
+	/* Меняем цвет svg (ради этого, собственно, svg и были заинлайнены в html разметку) */
+	fill: #000;
 }
 
 .modal-form__input {
