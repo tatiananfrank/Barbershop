@@ -236,32 +236,32 @@
 		</div>
 	</footer>
 
-	<section class="content modal">
-		<h2 class="content__title">Личный кабинет</h2>
+	<section class="content modal login-modal">
+		<h2 class="content__title content__title_margin-bottom_medium">Личный кабинет</h2>
 
-		<p class="content__text">Введите пожалуйста свой логин и пароль</p>
+		<p class="content__text login-modal__text">Введите пожалуйста свой логин и пароль</p>
 
-		<form class="form modal-form" action="" method="post">
+		<form class="form" action="" method="post">
 			<p class="form-item form__item">
 				<label class="visually-hidden" for="login_input">Логин</label>	
-				<input class="form-item__input modal-form__input" type="text" id="login_input" name="login" placeholder="Логин">
+				<input class="form-item__input login-modal__login" type="text" id="login_input" name="login" placeholder="Логин">
 			</p>
 			<p class="form-item form__item">
 				<label class="visually-hidden" for="password_input">Пароль</label>
-				<input class="form-item__input modal-form__input" type="password" id="password_input" name="password" placeholder="Пароль">
+				<input class="form-item__input login-modal__password" type="password" id="password_input" name="password" placeholder="Пароль">
 			</p>
-			<p class="form-item form__item">
-				<label class="form-item__label modal-form__checkbox-area">
-					<input class="visually-hidden" type="checkbox" id="remember_me_checkbox" name="remember_me" checked>
-					<span class="form-item__checkbox"></span>
+			<p class="form-item form__item login-modal__help">
+				<label class="form-item__label form-item__checkbox-area">
+					<input class="visually-hidden form-item__checkbox" type="checkbox" id="remember_me_checkbox" name="remember_me" checked>
+					<span class="form-item__checkbox-fake"></span>
 					Запомните меня
 				</label>
-				<a class="modal-form__restore" href="">Я забыл пароль!</a>
+				<a class="form-item__restore" href="">Я забыл пароль!</a>
 			</p>
 			<button class="button" type="submit">Войти</button>
 		</form>
 
-		<button class="close-button" type="button">Закрыть</button>
+		<button class="modal__close" type="button">Закрыть</button>
 	</section>
 </body>
 </html>

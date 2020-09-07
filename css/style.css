@@ -268,6 +268,10 @@ input[type="radio"].visually-hidden {
 	margin-bottom: 15px;
 }
 
+.content__title_margin-bottom_medium {
+	margin-bottom: 20px;
+}
+
 .content__title_margin-bottom_big {
 	margin-bottom: 25px;
 }
@@ -519,26 +523,171 @@ input[type="radio"].visually-hidden {
 	fill: #000;
 }
 
-.modal-form__input {
+.modal {
+	display: none;
+	position: fixed;
+	/* Не используем absolute, потому что нам нужно привязать модалку именно к вьюпорту (absolute для модалок вообще зло) */
+
+	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+}
+
+.modal__close {
+	position: absolute;
+	top: 0;
+	right: -34px;
+	width: 22px;
+	height: 22px;
+
+	font-size: 0;
+
+	background-color: transparent;
+	border: none;
+
+	cursor: pointer;
+}
+
+.modal__close::before,
+.modal__close::after {
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 2px;
+	width: 19px;
+	height: 3px;
+
+	background-color: #d0d0d0;
+}
+
+.modal__close::before {
+	transform: rotate(45deg);
+}
+
+.modal__close::after {
+	transform: rotate(-45deg);
+}
+
+.login-modal {
+	top: 120px;
+	left: 50%;
+	width: 300px;
+	padding: 50px 80px;
+	margin-left: -230px;
+}
+
+.login-modal__text {
+	margin: 0 0 10px;
+}
+
+.login-modal .form__item {
+	margin: 0 0 10px;
+}
+
+.login-modal .form-item__input {
+	box-sizing: border-box;
+	width: 300px;
+	padding: 10px 40px 10px 15px;
+
 	color: #000;
 	text-transform: uppercase;
 
 	background-color: #f9f6f3;
 }
 
-.modal-form__checkbox-area:hover,
-.modal-form__checkbox-area:focus {
+.login-modal__login {
+	/* Используем img, так как в поля формы нельзя вставить псевдоэлемент */
+	background-image: url("../img/user.svg");
+	background-position: 270px center;
+	background-repeat: no-repeat;
+}
+
+.login-modal__password {
+	background-image: url("../img/lock.svg");
+	background-position: 270px center;
+	background-repeat: no-repeat;
+}
+
+.login-modal__help {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.login-modal .login-modal__help {
+	margin: 15px 0;
+}
+
+.form-item__checkbox-area {
+	position: relative;
+	padding: 0 0 0 30px;
+	cursor: pointer;
+}
+
+.form-item__checkbox-area:hover,
+.form-item__checkbox-area:focus {
 	color: #663d15;
 }
 
-.modal-form__restore {
+.form-item__checkbox-fake {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 17px;
+	height: 17px;
+
+	border: 2px solid #000;
+}
+
+.form-item__checkbox:focus + .form-item__checkbox-fake {
+	border-color: #663d15;
+	outline: thin dotted;
+	outline: 5px auto -webkit-focus-ring-color;
+}
+
+.form-item__checkbox:checked + .form-item__checkbox-fake::before,
+.form-item__checkbox:checked + .form-item__checkbox-fake::after {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 1px;
+	width: 15px;
+	height: 2px;
+
+	background-color: #000;
+}
+
+.form-item__checkbox:checked + .form-item__checkbox-fake::before {
+	transform: rotate(45deg);
+}
+
+.form-item__checkbox:checked + .form-item__checkbox-fake::after {
+	transform: rotate(-45deg);
+}
+
+.form-item__restore {
 	color: #000;
 	text-decoration: underline;
 }
 
-.modal-form__restore:hover,
-.modal-form__restore:focus {
+.form-item__restore:hover,
+.form-item__restore:focus {
 	text-decoration: none;
+}
+
+.login-modal .button {
+	width: 100%;
+}
+
+.map-modal {
+	top: 50%;
+	left: 50%;
+	width: 766px;
+	height: 561px;
+	margin-top: -280px;
+	margin-left: -390px;
+}
+
+.map-modal__content {
+	margin: 0;
 }
 
 .breadcrumbs {
