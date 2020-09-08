@@ -17,7 +17,7 @@
 			<ul class="menu__list menu__list_size_l">
 				<li class="menu__item"><a class="menu__link" href="#">Информация</a></li>
 				<li class="menu__item"><a class="menu__link" href="#">Новости</a></li>
-				<li class="menu__item menu__item_active"><a class="menu__link" href="price.html">Прайс-лист</a></li>
+				<li class="menu__item menu__item_active"><a class="menu__link">Прайс-лист</a></li>
 				<li class="menu__item"><a class="menu__link" href="shop.html">Магазин</a></li>
 				<li class="menu__item"><a class="menu__link" href="#">Контакты</a></li>
 			</ul>
@@ -37,6 +37,57 @@
 			<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
 			<li class="breadcrumbs__item breadcrumbs__item_active">Прайс-лист</li>
 		</ul>
+
+		<!-- Этот пример демонстрирует разметку, наполнением которой мы не управляем (наполнение текстом происходит, например, с помощью CMS) -->
+		<!-- Поэтому для всего контента, который будет добавлен с помощью CMS, лучше всего создать спец. обертку -->
+		<!-- Контент внутри будет максимально простым (скорее всего, это будут чисто теги без классов, сгенерированные CMS автоматически) -->
+		<!-- Нужно постараться предусмотреть 3 шага:
+		1. Добавить максимально возможное нормальное оформление для самих тегов (в основном задать вертикальный ритм для текстовых тегов).
+		2. Предусмотреть некоторые классы (на тот случай, если CMS все же позволяет добавлять классы к контенту). Используем максимально простые классы для стилизации нестандартных элементов.
+		3. Предусмотреть сеточные классы, если стоит такая задача (менеджер CMS потом сможет использовать эти классы, с помощью div элементов). -->
+		<section class="inner-content">
+			<h2 class="big-heading">Истинно мужская классика</h2>
+
+			<div class="inner-columns">
+				<div class="inner-column-left">
+					<h2>Мы используем только <br> лучшие средства:</h2>
+					<ul class="custom-list-1">
+						<li>Baxter Of California</li>
+						<li>Mr Natty</li>
+						<li>Suavecito</li>
+						<li>Malin+Goetz</li>
+					</ul>
+				</div>
+				<div class="inner-column-right">
+					<h2>Цены на услуги <br> наших мастеров:</h2>
+					<table class="custom-table-1">
+						<tr>
+							<td>Стрижка</td>
+							<td>1500 ₽</td>
+						</tr>
+						<tr>
+							<td>Стрижка бороды</td>
+							<td>500 ₽</td>
+						</tr>
+						<tr>
+							<td>Накрутка усов</td>
+							<td>350 ₽</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+
+			<div class="inner-columns">
+				<h2>Несколько слов о нас:</h2>
+
+				<div class="inner-column-left">
+					<p class="short-text">Наша парикмахерская занимается исключительно мужскими стрижками. Стрижка каждого клиента для нас - это уникальная и продуманная до мелочей работа. Мы не работаем на количество, мы делаем качество.</p>
+				</div>
+				<div class="inner-column-right">
+					<p class="short-text">Наша мастерская расположена в центре города, поэтому сделать стильную стрижку можно в любое время, даже в обеденный перерыв. Здесь вы можете погрузиться в удобную для вас атмосферу, чувствовать себя комфортно и свободно!</p>
+				</div>
+			</div>
+		</section>
 	</main>
 
 	<footer class="footer footer_margin-top_small">
