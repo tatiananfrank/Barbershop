@@ -529,6 +529,21 @@ input[type="radio"].visually-hidden {
 	/* Не используем absolute, потому что нам нужно привязать модалку именно к вьюпорту (absolute для модалок вообще зло) */
 
 	box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
+
+	/* Чисто для класса modal-overlay */
+	z-index: 2;
+}
+
+.modal-overlay {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 1;
 }
 
 .modal__close {
